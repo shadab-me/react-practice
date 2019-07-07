@@ -1,10 +1,10 @@
 import React from 'react';
-
+import './weather.css';
 function Weather(props){
 
      
     return(
-        <div>
+        <div className = "container">
         <p>{props.temp}</p>
          <p>{props.name}</p>
          <p>{props.des}</p>
