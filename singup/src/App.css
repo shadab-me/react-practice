@@ -1,19 +1,55 @@
-form{
-  padding: 20px;
+
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.App{
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+.App__Aside{
+  width: 50%;
+  background-color: #66DAC7;
+}
+.App__Form{
+  width: 50%;
+  background-color: #2E4158;
+  padding: 25px 40px;
+  overflow: auto;
+}
+
+.mr-20 {
+  margin-right: 20 !important;
+}
+
+.FormField__Checkbox {
+  position: ralative;
+  top: 1.5px;
+}
+.FormField__TermLink{
+  color: white;
+  border-block: 1px solid #199887;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  margin-left: 5px;
+} 
+input{
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  outline: none;
 
 }
-input{
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  outline: 0px;
-  border: none;
-}
 button{
-  margin: 5px;
   padding: 10px;
-  text-align: center;
-}
-input:focus{
-  border: 2px solid red;
+  margin-top: 10px;
 }
