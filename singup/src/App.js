@@ -4,6 +4,8 @@ import './App.css';
  import Par from './components/par';
 import Todo from './components/todo';
 import Nav from './components/nav';
+import About from './components/about';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 class App extends React.Component{
   constructor(props) {
    super(props);
@@ -22,16 +24,23 @@ class App extends React.Component{
 
 }
 
+
 render() {
 return(
+  <Router>
   <div className = ''>
 <Nav/>
-<Todo/>
+<Route path = '/' component={Home}/>
+<Route path = '/Todo' component={Todo}/>
+<Route path = '/About' component={About}/>
 <Par count  = {this.state.count}/>
 <h1>{this.state.count}</h1>
 <button onClick = {this.tick}>Click Me</button>
 
 </div>
-)
-}}
+</Router>
+);
+}
+}
+ 
 export default App;

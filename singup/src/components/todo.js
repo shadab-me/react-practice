@@ -10,6 +10,7 @@ class Todo extends React.Component{
         render(){
         return(
             <div className = 'ToDo'>
+            
             <h1>To Do list</h1>
             <input type = 'text'></input>    
             <button>+</button>
