@@ -5,6 +5,7 @@ import './App.css';
 import Todo from './components/todo';
 import Nav from './components/nav';
 import About from './components/about';
+import Home from './components/'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 class App extends React.Component{
   constructor(props) {
