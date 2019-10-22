@@ -6,11 +6,9 @@ render(){
     return(
         <ul>
         <Link to='/'><li>Home</li></Link>
-       
         <Link to='/about'><li>About</li></Link> 
         <Link to ='/todo'><li>Todo</li></Link>
-        
-        
+        <Link to = '/events'><li>Event</li></Link>
         </ul>
     )
 }

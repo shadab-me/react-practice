@@ -5,7 +5,8 @@ import './App.css';
 import Todo from './components/todo';
 import Nav from './components/nav';
 import About from './components/about';
-import Home from './components/home'
+import Home from './components/home';
+import Events from './components/events';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 class App extends React.Component{
   constructor(props) {
@@ -36,10 +37,12 @@ return(
 <button onClick = {this.tick}>Click Me</button>
 <Router>
 <Nav/>
+
 <Switch>
 <Route path = '/' exact component={Home} /> 
 <Route path = '/about' component={About} />
 <Route path = '/todo' component={Todo} />
+<Route path = '/events' component={Events} />
 </Switch>
  </Router>
 </div>
