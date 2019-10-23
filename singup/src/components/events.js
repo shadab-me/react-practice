@@ -4,18 +4,25 @@ function Events() {
         useEffect(() => {
    fetchItems();
 }, []);
+const [items, setItems] = useState('[]')
 
         const fetchItems = async () => {
-               const data = await fetch('https://fortnite-api.theapinetwork.com/upcoming/get');
+               const data = await fetch('https://fortnite-public-api.theapinetwork.com/upcoming/get');
                const DataJson = await data.json();
-               console.log(DataJson);
-        }
-    
-
-    render(){
+               console.log(items);
+               setItems(items.items)
+        };
         return(
-            <h>Hey</h>
-        )
+            <div>
+             <h1>Hey</h1>
+     <div>
+{items.map(item => {
+    <h1>{item.name}</h1>
+})}
+  </div>
+  </div>
+         );
+    
     }
-}
+    
 export default Events;
