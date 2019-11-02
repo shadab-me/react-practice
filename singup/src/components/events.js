@@ -1,28 +1,27 @@
-import React, {useState, useEffect } from 'react';
-function Events() {
+ import React from 'react' 
+ class Events extends React.Component{
+         state = {
+                 items: []
+         }
+         fetchItems() {
+                 async () => {
+                const data = await fetch('https://fortnite-public-api.theapinetwork.com/upcoming/get');
+                const items = await data.json();
+                console.log(items);
+                setItems(items.items)
+         };
+        }
+         render(){
+                 return(
+                        <div className = 'Apps'> 
+                        {items.map(item => (<h1>{item.name}</h1> ))}
+                          </div>
+                 )
+         }
+ }
 
-        useEffect(() => {
-   fetchItems();
-}, []);
-const [items, setItems] = useState('[]')
-
-        const fetchItems = async () => {
-               const data = await fetch('https://fortnite-public-api.theapinetwork.com/upcoming/get');
-               const DataJson = await data.json();
-               console.log(items);
-               setItems(items.items)
-        };
-        return(
-            <div>
-             <h1>Hey</h1>
-     <div>
-{items.map(item => {
-    <h1>{item.name}</h1>
-})}
-  </div>
-  </div>
-         );
+        
+        
     
-    }
-    
+     
 export default Events;
